@@ -1,0 +1,250 @@
+.main__container {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../images/book1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--primary-color);
+    /*animation: bgPics 20s infinite;*/
+    position: relative;
+}
+
+.book-now {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(7px);
+
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+}
+
+.book-now-container {
+    width: var(--container-width);
+    /* border: 1px solid white; */
+    padding: 3rem;
+    box-shadow: 0 0 20px -10px var(--white-color);
+}
+
+.book-header {
+    display: flex;
+    gap: 2rem;
+}
+
+.book-header a .back i {
+    transition: 0.4s;
+    color: var(--white-color);
+}
+
+.book-header a:hover .back i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.wrapper {
+    width: 450px;
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+/* header .icons span {
+height: 2rem;
+width: 2rem;
+margin: 0 1px;
+font-size: 1.5rem;
+color: #878787;
+text-align: center;
+cursor: pointer;
+line-height: 38px;
+border-radius: 50%;
+} */
+
+header .icons {
+    display: flex;
+    gap: 2rem;
+}
+
+header .icons span {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+}
+
+header .icons span i {
+    color: #878787;
+    font-size: 1.25rem;
+    transition: 0.4s;
+    padding: 0.5rem;
+}
+
+header .icons span:hover i {
+    background-color: rgb(134, 132, 132);
+    color: var(--white-color);
+}
+
+.calendar ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+}
+
+.calendar ul li {
+    width: calc(100% / 7);
+    text-align: center;
+    position: relative;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.calendar .days li::before {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li:hover::before {
+    background-color: #f2f2f2;
+}
+
+.days li.active::before {
+    background-color: #9b59b6;
+}
+
+.book-now-container form {
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+}
+
+input[type='date'] {
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: var(--white-color);
+    border: 1px solid rgb(241, 236, 236);
+    outline: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.book-now-container form .sport #sport {
+    background-color: transparent;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: 1px solid rgb(241, 236, 236);
+    color: var(--white-color);
+    outline: none;
+}
+
+.book-now-container form .sport #sport option {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; /* Remove default arrow */
+}
+
+.available__timings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.available__timings #timings {
+    cursor: pointer;
+    background-color: var(--white-color);
+    padding: 1rem;
+}
+
+.available__timings .timing.selected {
+    background-color: red;
+    color: var(--white-color);
+}
+
+.book-now-container button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    transition: 0.4s;
+}
+
+.book-now-container button:hover {
+    opacity: 0.8;
+}
+
+@keyframes bgPics {
+    0% {
+        background-image: url('../images/book1.jpg');
+    }
+    35% {
+        background-image: url('../images/book2.jpg');
+    }
+    70% {
+        background-image: url('../images/book3.jpg');
+    }
+    100% {
+        background-image: url('../images/book4.jpg');
+    }
+
+
+}
+
+@media (max-width: 980px) {
+
+
+    .book-now-container {
+        display: grid;
+    }
+
+    .book-now-container form {
+        flex-direction: column;
+    }
+}

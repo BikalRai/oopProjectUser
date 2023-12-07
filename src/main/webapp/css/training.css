@@ -1,0 +1,85 @@
+.training__container {
+    display: grid;
+    place-items: center;
+}
+
+.training__hero {
+    height: 65vh;
+    width: 100vw;
+    background-image: url("../images/training.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.training__hero-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.3rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.training__hero-overlay h1 {
+    color: var(--white-color);
+    font-size: 4rem;
+}
+
+.training {
+    width: var(--container-width);
+    padding-top: 5rem;
+}
+
+.training .form__container {
+    margin-top: 5rem;
+    box-shadow: 0 5px 10px var(--font-color);
+    padding: 2rem;
+}
+
+.training form {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.training form label {
+    display: block;
+}
+
+.training form .form__field input,
+.training form .form__field select,
+.training form .form__field input[type="date"] {
+    background-color: transparent;
+    border: 1px solid var(--font-color);
+    outline: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.training form button {
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 2rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.training form button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+@media (min-width: 800px) {
+    .training form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .training form button {
+        margin-top: 1rem;
+        grid-column: span 2;
+    }
+}

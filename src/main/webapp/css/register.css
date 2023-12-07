@@ -1,0 +1,125 @@
+body {
+    display: grid;
+    place-content: center;
+    color: var(--primary-color);
+}
+
+.register {
+    max-width: 1440px;
+}
+
+.register .register__img {
+    display: none;
+}
+
+.register .register__form {
+    padding: 5rem 2rem;
+    display: grid;
+    gap: 1.5rem;
+    place-items: center;
+    position: relative;
+}
+
+.register form {
+    display: grid;
+    gap: 1.25rem;
+    place-items: center;
+}
+
+.register .register__form a .back {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    background-color: transparent;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+}
+
+.register .register__form a .back i {
+    font-size: 2rem;
+    transition: 0.4s;
+}
+
+.register .register__form a .back:hover i {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+a {
+    color: var(--font-color);
+    font-weight: 500;
+}
+
+.fullname,
+.mobile,
+.password,
+.cpassword,
+.actions {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    padding-left: 1.5rem;
+}
+
+input {
+    background-color: transparent;
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.35);
+    min-width: 320px;
+}
+
+.actions {
+    min-width: 320px;
+    gap: 1rem;
+    align-items: start;
+}
+
+.actions button {
+    align-self: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.actions p {
+    color: var(--font-color);
+}
+
+.actions p a {
+    color: var(--primary-color);
+}
+
+@media (min-width: 980px) {
+    .register {
+        display: flex;
+    }
+
+    .register .register__form {
+        flex: 1;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 1rem;
+    }
+
+    .register .register__form form {
+        width: 100%;
+    }
+
+    .register .register__img {
+        display: initial;
+        flex: 1;
+        border-radius: 1rem 0 0 1rem;
+        overflow: hidden;
+    }
+
+    .register .register__img img {
+        width: 100%;
+        height: 100%;
+    }
+}

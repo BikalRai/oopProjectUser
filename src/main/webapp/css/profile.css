@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #ea3024;
+    --primary-color-diluted: #d25951;
+    --bg-color: #fdf9f1;
+    --font-color: #555555;
+    --white-color: #fff;
+    --container-width: calc(100% - 20%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+
+
+    color: var(--font-color);
+}
+
+.body__overlay {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/sports-tools.jpg');
+    background-size: cover;
+}
+
+.profile__form {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.form__field {
+    display: grid;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.form__field-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__field-heading button {
+    background-color: transparent;
+    border: none;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.form__field-heading button:hover {
+    color: #fff;
+    background-color: rgba(0, 128, 0, 0.779);
+}
+
+.form__field label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form__field input {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 1, 52, 0.56);
+    padding: 0.5rem 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.form__action button {
+    border: none;
+    padding: 0.5em 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: rgba(0, 128, 0, 0.779);
+}
+
+.btn-cancel {
+    background-color: rgba(255, 0, 0, 0.711);
+}
+
+.popup {
+    background-color: rgba(255, 0, 0, 0.711);
+    color: #fff;
+    font-weight: 900;
+    padding: 1em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(20px);
+    display: none;
+}
+
+.error-msg {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.confirm {
+    max-width: 375px;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(255, 85, 0, 0.66);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.confirm__actions {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}

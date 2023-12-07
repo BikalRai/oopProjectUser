@@ -1,0 +1,48 @@
+.payment__container {
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background-color: #ddd;
+    padding: 3rem;
+}
+
+.payment__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 5px 20px -6px rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+}
+
+.payment__details p span {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.payment__container form {
+    padding: 2rem;
+    display: grid;
+    gap: 0.5rem;
+    box-shadow: 0 5px 20px -6px rgba(0, 0, 0, 0.6);
+}
+
+.login {
+    background-color: rgb(8, 102, 8);
+    color: #fff;
+}
+
+.cancel {
+    background-color: #8e0d0d;
+    color: #fff;
+}
+
+@media (max-width: 980px) {
+    .payment__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
